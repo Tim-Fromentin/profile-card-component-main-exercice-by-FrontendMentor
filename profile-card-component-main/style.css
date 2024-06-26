@@ -1,0 +1,101 @@
+html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}body{margin:0;padding:0}ol,ul{list-style:none}a{text-decoration:none;color:inherit}
+
+/* ### Primary
+
+Dark cyan: 
+Very dark desaturated blue: 
+Dark grayish blue: hsl(227, 10%, 46%)
+
+### Neutral
+
+Dark gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (name and stats): 18px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700 */
+
+:root {
+    --color-primary: hsl(185, 75%, 39%);
+    --color-secondary: hsl(229, 23%, 23%);
+}
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: var(--color-primary);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: -50% 50%, 150% -50%;
+}
+.card {
+    background: white;
+    color: hsl(0, 0%, 59%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 320px;
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+}
+
+.card strong {
+    font-weight: 700;
+    color: #000;
+}
+.card_header {
+    background: url(./images/bg-pattern-card.svg);
+    position: relative;
+    height: 150px;
+    margin-bottom: 25px;
+    border-radius: 25px 25px 0 0;
+}
+.card_header img {
+    border-radius: 100%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+}
+.card_body {
+    padding: 25px 50px;
+    text-align: center;
+}
+@media screen and (max-width: 375px) {
+    .card {
+       width: 99%;
+    }   
+    .card_body {
+        padding: 25px;
+    }
+   }
+.card_box_number {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+.card_box_number p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+.card_box_number p:not(:last-child){
+    margin: 0px 25px 0 0;
+}
+.card_box_number p strong {
+    font-size: 1.125rem;
+}
+.card_city {
+    font-size: 0.9rem;
+}
